@@ -20,6 +20,8 @@ defmodule MyClusteredApp.Mixfile do
       {:cowboy, "~> 1.0.0"},
       {:plug, "~> 1.0"},
       {:poison, "~> 3.1"},
+      {:libcluster, "~> 2.1"},
+      {:libcluster_cloud_foundry, git: "https://github.com/DylanGriffith/libcluster-cloud-foundry.git"},
     ]
   end
 end

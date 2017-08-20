@@ -1,0 +1,8 @@
+---
+applications:
+  - name: my-clustered-app
+    host: changeme-clustered-app
+    instances: 4
+    memory: 1G
+    buildpack: https://github.com/HashNuke/heroku-buildpack-elixir.git
+    command: elixir --name app$CF_INSTANCE_INDEX@$CF_INSTANCE_INTERNAL_IP --cookie secret-cookie --erl "-kernel inet_dist_listen_min 9001 inet_dist_listen_max 9001" -S mix run --no-halt
